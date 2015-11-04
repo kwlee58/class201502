@@ -1,0 +1,83 @@
+---
+title: "Class_201502_overview"
+author: "coop711"
+date: "2015년 9월 7일"
+output: html_document
+---
+
+* 8월31일과 9월2일 현황
+
+```{r}
+setwd("~/Dropbox/Works/Class/Statistics/201502")
+options(width=180)
+load("class0906.rda")
+class0831[, -c(1:3, 5:6)]
+class0902[, -c(1:3, 5:6)]
+ls()
+```
+
+* 두 자료 합쳐 보기
+
+```{r}
+library(plyr)
+class.join <- join(class0831, class0902, by="학.직.번", type="full")
+class.join[, -c(1:3, 5:6)]
+```
+
+* 일부 변수명 조정
+
+```{r}
+names(class.join)
+names(class.join)[12] <- "after"
+names(class.join)[13] <- "sejong"
+names(class.join)
+```
+
+* 산국궤 수업 전과 수업 후의 인식 차이 계산
+
+```{r}
+class.join$diff <- class.join$after - class.join$before
+table(class.join$diff, useNA="ifany")
+```
+
+* paired t.test 해 보겠지만 의미가 있는지 생각해 볼 것.
+
+```{r}
+t.test(class.join$diff, alternative="greater")
+```
+
+* 세종대왕에 대한 인식 정도 (before)
+
+```{r}
+table(class.join$sejong, useNA="ifany")
+class.join$sejong.tf <- factor(ifelse(class.join$sejong == "가나다", "Right", "Wrong"))
+table(class.join$sejong.tf, useNA="ifany")
+options(digits=2)
+prop.table(table(class.join$sejong.tf, useNA="ifany"))*100
+```
+
+* e-mail 주소의 특성
+
+```{r}
+table(mail.com)
+mail.df <- as.data.frame(table(mail.com, useNA="ifany"), stringsAsFactors=TRUE)
+mail.df
+mail.df.order <- mail.df[order(mail.df$Freq, decreasing=TRUE), ]
+mail.df.order
+```
+
+* 성씨의 분포
+
+```{r}
+table(class.join$f.name, useNA="ifany")
+f.name.df <- as.data.frame(table(class.join$f.name, useNA="ifany"), stringsAsFactors=TRUE)
+f.name.df.order <- f.name.df[order(f.name.df$Freq, decreasing=TRUE),]
+f.name.df.order
+```
+
+
+* 자료 정리
+
+```{r}
+save.image(file="class0906.rda")
+```

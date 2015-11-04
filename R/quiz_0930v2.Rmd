@@ -1,0 +1,93 @@
+---
+title: "quiz_0930"
+author: "coop711"
+date: "2015년 10월 3일"
+output: html_document
+---
+
+## Data
+
+* 자료 구성
+
+```{r}
+library(xlsx)
+library(pander)
+library(ggplot2)
+options(digits=3)
+quiz0930 <- read.xlsx("class_roll0930.xlsx", 1, startRow = 2, endRow = 72, colIndex = c(3:7, 9:13))
+str(quiz0930)
+names(quiz0930) <- c("dept", "id", "name", "year", "e.mail", "cell.no", "Q1", "Q2", "Q3", "Q4")
+str(quiz0930)
+q.ans <- quiz0930[paste("Q", 1:4, sep="")]
+q.ans.tax <- factor(q.ans$Q1, levels=c("가", "나", "다", "라", "마"), labels=paste(9:5, ":", 1:5))
+q.ans.poll <- factor(q.ans$Q3, levels=c("가", "나", "다", "라", "마"), labels=paste(8:4, ":", 2:6))
+```
+
+* 응답 내용 분석
+     + 국세 지방세 배분비율에 대한 오해
+     + 세법개혁에 대한 세종대왕의 여론조사 결과 미숙지
+
+```{r}
+q.ans.tbl <- apply(q.ans, 2, table, useNA="ifany")
+pander(q.ans.tbl)
+pander(table(q.ans.tax))
+pander(table(q.ans.poll))
+```
+
+* 정답 구성
+
+```{r}
+q.key <- c("나", "가", "다", "라")
+q.key.l <- split(q.key, f=paste("A", 1:4, sep=""))
+```
+
+
+
+* 정답과 비교 
+
+```{r}
+(marks <- mapply(function(x, y) factor(ifelse(x == y, "R", "W")), y = q.key.l, quiz0930[c("Q1", "Q2", "Q3", "Q4")]))
+(marks.tbl <- apply(marks, 2, table, useNA="ifany"))
+(marks.tbl.2 <- apply(marks, 2, table))
+(marks.df <- as.data.frame(marks.tbl.2))
+v.names <- c("국세:지방세", "문해력격차심한나라", "여론조사 찬반", "독서율낮은연령대")
+barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
+```
+
+* ggplot으로 그리려면 long format 필요
+
+```{r, fig.width=5, fig.height=5}
+library(reshape2)
+str(marks)
+dimnames(marks) <- list("ID"=dimnames(marks)[[1]], "Items" = dimnames(marks)[[2]])
+str(marks)
+marks.long <- melt(marks, value.name="Marks")
+str(marks.long)
+ggplot(na.omit(marks.long), aes(x=Items, fill=Marks)) + geom_bar(stat="bin")
+```
+
+* `marks.tbl`을 써서 그리려면,
+
+```{r, fig.width=5, fig.height=5}
+str(marks.tbl)
+dimnames(marks.tbl) <- list("Marks"= dimnames(marks.tbl)[[1]], "Items" = dimnames(marks.tbl)[[2]])
+str(marks.tbl)
+(marks.tbl.long <- melt(marks.tbl, value.name="Counts"))
+str(marks.tbl.long)
+ggplot(na.omit(marks.tbl.long), aes(x = Items, y = Counts, fill = Marks)) +
+  geom_bar(stat="identity")
+```
+
+### 한글화 
+
+### 정답률 계산
+
+```{r}
+(marks.rate <- prop.table(marks.tbl.2, margin=2))*100
+```
+
+## 자료 갈무리
+
+```{r}
+save.image("quiz_0930.rda")
+```

@@ -1,0 +1,88 @@
+---
+title: "quiz_0923"
+author: "coop711"
+date: "2015년 9월 30일"
+output: html_document
+---
+
+## Data
+
+* 두 학생의 자료 중 "2~3", "3~4"를 "2.5", "3.5" 로 수정하고, 속성을 숫자로 바꾼 후 읽어들임. 
+그렇지 않으면 이 변수들을 character로 취급하게 됨.
+
+```{r}
+options(width=132)
+library(xlsx)
+library(ggplot2)
+library(pander)
+reading0923<-read.xlsx("class_roll0923.xlsx", 1, startRow=2, endRow=72, colIndex=c(3:7, 9:23))
+str(reading0923)
+names(reading0923) <- c("dept", "id", "name", "year", "e.mail", "cell.no", "age", "gender", "region", "Q6.1", "Q6.2", "Q7.pbook", "Q7.ebook", "quantity.enough", "Q9.p.rank1", "Q9.p.rank2", "Q9.p.rank3", "Q9.e.rank1", "Q9.e.rank2", "Q9.e.rank3")
+str(reading0923)
+```
+
+* 숫자로 나온 범주형 변수들을 우선 character로 변환
+
+```{r}
+reading0923[c(1, 4, 8, 9, 10, 11, 14:20)] <- lapply(reading0923[c(1, 4, 8, 9, 10, 11, 14:20)], as.character)
+str(reading0923)
+```
+
+* factor 변환
+
+```{r}
+reading0923$gender <- factor(reading0923$gender, levels=c("1", "2"), labels= c("남", "여"))
+reading0923$region <- factor(reading0923$region, levels=c("1", "4", "8", "9", "10", "14", "16"), labels=c("서울", "인천", "경기", "강원", "충북", "경북", "제주"))
+reading0923$Q6.1 <- factor(reading0923$Q6.1, levels=c("1", "2", "3", "5", "6", "11", "12"), labels=c("일(공부)때문에 바빠서", "책 읽는 것이 싫고 습관이 들지 않아서", "다른 여가활동을 하느라 시간이 없어서", "어떤 책을 읽을지 몰라서", "읽을 만한 책이 없어서", "책을 읽을 만한 마음의 여유가 없어서", "기타"))
+reading0923$Q6.2 <- factor(reading0923$Q6.2, levels=c("1", "2", "3", "5", "6", "11", "12"), labels=c("일(공부)때문에 바빠서", "책 읽는 것이 싫고 습관이 들지 않아서", "다른 여가활동을 하느라 시간이 없어서", "어떤 책을 읽을지 몰라서", "읽을 만한 책이 없어서", "책을 읽을 만한 마음의 여유가 없어서", "기타"))
+reading0923$quantity.enough <- factor(reading0923$quantity.enough, levels=c("1", "2", "3", "4", "5"), labels=c("매우 충분", "충분", "보통", "부족", "매우 부족"))
+str(reading0923)
+```
+
+
+## 기초통계 요약
+
+```{r}
+pander(sapply(reading0923[c("Q6.1", "Q6.2")], table), align=c("l", "r", "r"))
+pander(table(reading0923[c("quantity.enough")]))
+# pander(sapply(reading0923[c(15:20)], table))
+pander(sapply(reading0923[12:13], summary))
+```
+
+## 독서량 dot chart
+
+```{r fig.width=6, fig.height=9}
+source("theme_kr_HCR.R")
+source("theme_kr_AG.R")
+source("theme_kr_ASGN.R")
+ggplot(na.omit(data.frame(reading0923[c("id", "Q7.pbook")])), aes(x=Q7.pbook, y=reorder(id, Q7.pbook))) + geom_point() +
+  geom_segment(aes(yend=reorder(id, Q7.pbook)), xend=0) + theme_bw() + theme.HCR.kr +
+  xlab("권") + ylab("학번") + ggtitle("연간 독서량(종이책)")
+ggplot(na.omit(data.frame(reading0923[c("id", "Q7.ebook")])), aes(x=Q7.ebook, y=reorder(id, Q7.ebook))) + geom_point() +
+  geom_segment(aes(yend=reorder(id, Q7.ebook)), xend=0) + theme_bw() + theme.HCR.kr +
+  xlab("권") + ylab("학번") + ggtitle("연간 독서량(전자책)")
+```
+
+## 남녀별 독서량 비교
+
+```{r fig.width=6, fig.height=9}
+df <- data.frame(reading0923[c("id", "gender", "Q7.pbook", "Q7.ebook")])
+id.o.p <- df$id[order(df$gender, df$Q7.pbook)]
+id.o.e <- df$id[order(df$gender, df$Q7.ebook)]
+df$id.p <- factor(df$id, levels = id.o.p)
+df$id.e <- factor(df$id, levels = id.o.e)
+ggplot(na.omit(df), aes(x=Q7.pbook, y=id.p)) + geom_point(size=3, aes(colour=gender)) +
+  geom_segment(aes(yend=id.p), xend=0) + theme_bw() + theme.HCR.kr +
+  scale_colour_manual(limits=c("남", "여"), values=c("blue", "red")) +
+  xlab("권") + ylab("학번") + ggtitle("남녀별 연간 독서량(종이책)")
+ggplot(na.omit(df), aes(x=Q7.ebook, y=id.e)) + geom_point(size=3, aes(colour=gender)) +
+  geom_segment(aes(yend=id.e), xend=0) + theme_bw() + theme.HCR.kr +
+  scale_colour_manual(limits=c("남", "여"), values=c("blue", "red")) +
+  xlab("권") + ylab("학번") + ggtitle("남녀별 연간 독서량(전자책)")
+```
+
+## 자료 갈무리
+
+```{r}
+save.image("quiz_0923.rda")
+```

@@ -1,0 +1,266 @@
+---
+title: "Quiz 1028 by Colleges"
+author: "coop711"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### Data
+
+* 자료 구성
+
+```{r}
+library(xlsx)
+library(pander)
+library(ggplot2)
+options(digits=3)
+quiz1028 <- read.xlsx("../data/class_roll1028.xlsx", 1, startRow = 2, endRow = 72, colIndex = c(3:7, 9:13), colClasses=rep("character", 10))
+str(quiz1028)
+names(quiz1028) <- c("dept", "id", "name", "year", "e.mail", "cell.no", "Q1", "Q2", "Q3", "Q4")
+str(quiz1028)
+q.ans <- quiz1028[paste("Q", 1:4, sep="")]
+q.ans.max.tax.rate <- factor(q.ans$Q1, levels=c("가", "나", "다", "라"), labels=c("90% 이상", "70 ~ 90%", "50 ~ 70%", "30 ~ 50%"))
+q.ans.book.of.change <- factor(q.ans$Q2, levels=c("가", "나", "다", "라"), labels=c("지천태", "천지비", "풍뢰익", "산택손"))
+q.ans.trickle.down <- factor(q.ans$Q3, levels=c("가", "나", "다", "라"), labels=c("있다", "없다", "있는 듯", "계층별"))
+q.ans.top.income.kr <- factor(q.ans$Q4, levels=c("가", "나", "다", "라"), labels=paste(1:4, "위", sep = ""))
+```
+
+* 응답 내용 분석
+     + 미국의 대번영 시기 최고소득세율에 대한 인식 개선(정답률 : 34% => 71%)
+     + 천지비 괘에 대한 인식 양호(정답률 68%) 
+     + '낙수'효과에 대한 인식 개선(정답률 : 51% => 67%)
+     + 우리나라 상위소득 점유율에 대한 인식 개선(정답률 : 42% => 62%)
+     
+```{r}
+load("../R/quiz1028v2.rda")
+pander(table(quiz1028.div$college, quiz1028.div$Q1))
+pander(table(quiz1028.div$college, quiz1028.div$Q2))
+pander(table(quiz1028.div$college, quiz1028.div$Q3))
+pander(table(quiz1028.div$college, quiz1028.div$Q4))
+pander(mapply(function(x) xtabs(~college + x, data=quiz1028.div), quiz1028.div[c("Q1", "Q2", "Q3", "Q4")]))
+q.ans.tbl <- apply(q.ans, 2, table, useNA="ifany")
+pander(q.ans.tbl)
+pander(table(q.ans.max.tax.rate))
+pander(table(q.ans.book.of.change))
+pander(table(q.ans.trickle.down))
+pander(table(q.ans.top.income.kr))
+```
+
+## 답안 분석
+
+### 정답표와 비교
+
+* 정답 구성
+    + `mapply()`를 적용하기 위하여 정답을 `list`로 분리,  
+
+```{r}
+q.key <- c("가", "나", "나", "나")
+(q.key.l <- split(q.key, f=paste("A", 1:4, sep="")))
+str(q.key.l)
+```
+
+* 작성한 답안을 정답과 비교 
+    + `mapply()`에 적용하는 함수를 `factor()`와 `ifelse()`의 합성함수로 구성된 `anonymous`로 만들되, `y = q.key.l`의 default로 잡은 점에 유의.
+
+```{r}
+(marks <- mapply(function(x, y) factor(ifelse(x == y, "R", "W")), y = q.key.l, quiz1028[c("Q1", "Q2", "Q3", "Q4")]))
+```
+
+* 요약표 작성. 결석생들이 NA로 나타남.
+
+```{r}
+(marks.tbl <- apply(marks, 2, table, useNA="ifany"))
+```
+
+* 결석생들을 제외한 요약표
+
+```{r}
+(marks.tbl.2 <- apply(marks, 2, table))
+```
+
+### `barplot()` 작성
+
+* `barplot()` 막대에 표시할 정답률 계산
+
+```{r}
+round(prop.table(marks.tbl.2, margin=2)*100, digits=1)
+(correct.ans.rate <- round(prop.table(marks.tbl.2, margin=2)[1, ]*100, digits=0))
+```
+
+* `barplot()` 막대의 `names.arg`에 들어갈 이름 구성.
+
+```{r}
+v.names <- c("1950년대\n미국최고소득세율", "주역괘로보는\n미국소득증가", "가계수지와\n낙수효과", "우리나라\n소득상위10%")
+```
+
+* `barplot()` 기본 골격
+
+```{r}
+barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
+```
+
+* 메인 타이틀과 x축, y축의 제목 추가
+
+```{r}
+barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
+title(main="10월 28일 퀴즈 결과", xlab="문항", ylab="인원")
+```
+
+* 범례 추가
+    + 좌표는 시행착오를 거쳐서 찾아냄.
+    
+```{r}
+barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
+title(main="10월 28일 퀴즈 결과", xlab="문항", ylab="인원")
+legend(x=0.35,y=59, legend=c("오답", "정답"), fill=c("red", "cyan"))
+```
+
+* 각 막대에 정답률(%) 표시
+    + 좌표는 역시 시행착오를 거쳐 찾아냄.
+
+```{r}
+barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
+title(main="10월 28일 퀴즈 결과", xlab="문항", ylab="인원")
+legend(x=0.35, y=59, legend=c("오답", "정답"), fill=c("red", "cyan"))
+text(x=c(0.75, 1.9, 3.1, 4.3), y=rep(10, 4), labels=paste(correct.ans.rate, "%", sep=""))
+```
+
+
+## `ggplot()` 접근
+
+### Two types of long format 
+
+* ggplot으로 그리려면 long format 필요
+    + `marks`의 자료구조가 매트릭스이므로 `reshape2::melt`의 array(matrix, table) 유형에 적용.
+    + matrix의 행이름과 열이름을 붙이는 방법에 대하여 유의하고,
+    + 행이름과 열이름이 어떻게 등장하는지 살필 것.
+    + `"ID"`와 `"Items"`를 `dimnames()`로 설정하지 않으면 `Var1`과 `Var2`로 나타나게 됨.
+    + `value.name`을 설정하지 않으면 `value`라는 변수명을 갖게 됨. 확인해 볼 것.
+
+```{r}
+library(reshape2)
+str(marks)
+dimnames(marks) <- list("ID" = quiz1028$id, "Items" = dimnames(marks)[[2]])
+# dimnames(marks) <- list("ID" = dimnames(marks)[[1]], "Items" = dimnames(marks)[[2]])
+str(marks)
+(marks.long <- melt(marks, value.name="Marks"))
+str(marks.long)
+```
+
+* `ggplot` 기본 골격
+
+```{r}
+(ml.1 <- ggplot(na.omit(marks.long), aes(x=Items, fill=Marks)) + geom_bar(stat="bin"))
+```
+
+* 흑백 배경 전환
+
+```{r}
+(ml.2 <- ml.1 + theme_bw())
+```
+
+* 한글로 제목과 축이름 붙이기
+
+```{r}
+source("theme_kr_HCR.R")
+ls()
+(ml.3 <- ml.2 + theme.HCR.kr + xlab("문항") + ylab("인원") + ggtitle("10월 28일 퀴즈 결과"))
+```
+
+* 한글로 막대에 문항별 이름 붙이기
+
+```{r}
+(ml.4 <- ml.3 + scale_x_discrete(labels=v.names))
+```
+
+* `legend`에 한글이름 붙이기
+
+```{r}
+(ml.5 <- ml.4 + labs(fill="정답여부") + scale_fill_discrete(labels=c("정답", "오답")))
+```
+
+* 색이 맘에 안 들면,
+
+```{r}
+(ml.6 <- ml.4 + scale_fill_manual(values=c("cyan", "red"), labels=c("정답", "오답")) + labs(fill="정답여부"))
+```
+
+* 범례 항목의 등장 순서를 바꾸려면,
+
+```{r}
+(ml.7 <- ml.4 + scale_fill_manual(limits=c("W", "R"), values=c("red", "cyan"), labels=c("오답", "정답")) + labs(fill="정답여부"))
+```
+
+* 정답률을 각 막대에 새기기
+
+```{r}
+(ml.8 <- ml.7 + annotate("text", x=1:4, y=rep(10, 4), label=paste(correct.ans.rate, "%", sep="")))
+```
+
+### `marks.tbl`로 그리려면, 
+
+* `marks.tbl`을 logn format으로 전환
+
+```{r, fig.width=5, fig.height=5}
+str(marks.tbl)
+dimnames(marks.tbl) <- list("Marks"= dimnames(marks.tbl)[[1]], "Items" = dimnames(marks.tbl)[[2]])
+str(marks.tbl)
+(marks.tbl.long <- melt(marks.tbl, value.name="Counts"))
+str(marks.tbl.long)
+```
+
+* `ggplot` 골격
+    + `aes()`에 `y = Counts` 등장.
+
+```{r}
+(mtl.1 <- ggplot(na.omit(marks.tbl.long), aes(x = Items, y = Counts, fill = Marks)) +
+  geom_bar(stat="identity"))
+```
+
+* 흑백 배경 전환
+
+```{r}
+(mtl.2 <- mtl.1 + theme_bw())
+```
+
+* 한글로 제목과 축이름 붙이기
+
+```{r}
+(mtl.3 <- mtl.2 + theme.HCR.kr + xlab("문항") + ylab("인원") + ggtitle("10월 28일 퀴즈 결과"))
+```
+
+* 한글로 막대에 문항별 이름 붙이기
+
+```{r}
+(mtl.4 <- mtl.3 + scale_x_discrete(labels=v.names))
+```
+
+* `legend`에 한글이름 붙이기
+
+```{r}
+(mtl.5 <- mtl.4 + labs(fill="정답여부") + scale_fill_discrete(labels=c("정답", "오답")))
+```
+
+* 색이 맘에 안 들면,
+
+```{r}
+(mtl.6 <- mtl.4 + scale_fill_manual(values=c("cyan", "red"), labels=c("정답", "오답")) + labs(fill="정답여부"))
+```
+
+* 범례 항목의 등장 순서를 바꾸려면,
+
+```{r, legend.item.order}
+(mtl.7 <- mtl.4 + scale_fill_manual(limits=c("W", "R"), values=c("red", "cyan"), labels=c("오답", "정답")) + labs(fill="정답여부"))
+```
+
+* 정답률을 각 막대에 새기기
+
+```{r, final.ggplot}
+(mtl.8 <- mtl.7 + annotate("text", x=1:4, y=rep(10, 4), label=paste(correct.ans.rate, "%", sep="")))
+```
+
+## 자료 갈무리
+
+```{r, save.image}
+save.image("quiz_1028v2.rda")
+```

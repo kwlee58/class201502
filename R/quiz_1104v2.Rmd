@@ -49,7 +49,7 @@ mosaicplot(table("단과대학"=quiz1104.div$college, "Q4"=quiz1104.div$Q4), mai
 ```
 
 ```{r, mapply with mosaicplot}
-mapply(function(x) mosaicplot(xtabs(~college + x, data=quiz1104.div), xlab =  "단과대학", ylab = names(x)), quiz1104.div[c("Q1", "Q2", "Q3", "Q4")])
+mapply(function(x) mosaicplot(xtabs(~college + x, data=quiz1104.div), main="단과대학별 응답", xlab = "단과대학", ylab = names(x)), quiz1104.div[c("Q1", "Q2", "Q3", "Q4")])
 ```
 
 

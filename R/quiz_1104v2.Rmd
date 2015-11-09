@@ -9,7 +9,7 @@ output: html_document
 
 * 자료 구성
 
-```{r}
+```{r, data setting}
 library(xlsx)
 library(pander)
 library(ggplot2)
@@ -31,29 +31,32 @@ q.ans.coop.agri <- factor(q.ans$Q4, levels=c("가", "나", "다", "라"), labels
      + '낙수'효과에 대한 인식 저하(정답률 : 51% => 67% => 77% => 72%)
      + 농식품분야 한국 농업협동조합의 위상에 대한 인식 개선 필요(정답률 : 36%)
 
-```{r}
+```{r, cross-tables}
 load("../R/quiz1028v2.rda")
 quiz1104.div <- data.frame(quiz1028.div[, 1:7], quiz1104[c("Q1", "Q2", "Q3", "Q4")])
 pander(table(quiz1104.div$college, quiz1104.div$Q1))
 pander(table(quiz1104.div$college, quiz1104.div$Q2))
 pander(table(quiz1104.div$college, quiz1104.div$Q3))
 pander(table(quiz1104.div$college, quiz1104.div$Q4))
+```
+
+```{r, mapply and xtabs}
 pander(mapply(function(x) xtabs(~college + x, data=quiz1104.div), quiz1104.div[c("Q1", "Q2", "Q3", "Q4")], SIMPLIFY = FALSE))
 ```
 
-```{r mosaicplots}
+```{r, mosaicplots, fig.width = 6, fig.height = 6}
 mosaicplot(table("단과대학"=quiz1104.div$college, "Q1"=quiz1104.div$Q1), main="단과대학별 응답(Q1)")
 mosaicplot(table("단과대학"=quiz1104.div$college, "Q2"=quiz1104.div$Q2), main="단과대학별 응답(Q2)")
 mosaicplot(table("단과대학"=quiz1104.div$college, "Q3"=quiz1104.div$Q3), main="단과대학별 응답(Q3)")
 mosaicplot(table("단과대학"=quiz1104.div$college, "Q4"=quiz1104.div$Q4), main="단과대학별 응답(Q4)")
 ```
 
-```{r, mapply with mosaicplot}
-mapply(function(x) mosaicplot(xtabs(~college + x, data=quiz1104.div), main="단과대학별 응답", xlab = "단과대학", ylab = names(x)), quiz1104.div[c("Q1", "Q2", "Q3", "Q4")])
+```{r, mapply with mosaicplot, fig.width = 6, fig.height = 6}
+mapply(function(x) mosaicplot(xtabs(~college + x, data=quiz1104.div), main=paste("단과대학별 응답(", dimnames(x)[[2]],")", sep=""), xlab = "단과대학", ylab = names(x)), quiz1104.div[c("Q1", "Q2", "Q3", "Q4")])
 ```
 
 
-```{r}
+```{r, pander table}
 q.ans.tbl <- apply(q.ans, 2, table, useNA="ifany")
 pander(q.ans.tbl)
 pander(table(q.ans.canada.coop))
@@ -69,7 +72,7 @@ pander(table(q.ans.coop.agri))
 * 정답 구성
     + `mapply()`를 적용하기 위하여 정답을 `list`로 분리,  
 
-```{r}
+```{r, q.key as a list}
 q.key <- c("나", "다", "나", "나")
 (q.key.l <- split(q.key, f=paste("A", 1:4, sep="")))
 str(q.key.l)

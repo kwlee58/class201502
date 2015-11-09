@@ -1,0 +1,49 @@
+---
+title: "Correlation and Causation"
+author: "coop711"
+date: "2015년 11월 9일"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Data
+
+```{r, random number generation}
+set.seed(12345678)
+sales.summer <- rnorm(26, mean=5, sd=1)
+drowns.summer <- rnorm(26, mean=5, sd=1)
+sales.winter <- rnorm(26, mean=3, sd=1)
+drowns.winter <- rnorm(26, mean=3, sd=1)
+```
+
+### Scatter Diagram for all
+
+```{r, scatter for all, fig.width=6, fig.height=6}
+plot(c(sales.winter, sales.summer), c(drowns.winter, drowns.summer), xlim=c(0, 9), ylim=c(0, 9), ann=FALSE)
+title(main="청량음료 판매량과 익사자수", xlab="청량음료 판매고", ylab="익사자수")
+text(x=2, y=8, labels=paste("r=", round(cor(c(sales.winter, sales.summer), c(drowns.winter, drowns.summer)), digits=2)))
+```
+
+### Scatter Diagram in winter
+
+```{r, fig.width=6, fig.height=6}
+plot(sales.winter, drowns.winter, xlim=c(0, 9), ylim=c(0, 9), col="blue")
+cor(sales.winter, drowns.winter)
+```
+
+### Scatter Diagram in summer added 
+
+```{r, fig.width=6, fig.height=6}
+plot(sales.winter, drowns.winter, xlim=c(0, 9), ylim=c(0, 9), col="blue", ann=FALSE)
+points(sales.summer, drowns.summer, col="red")
+title(main="청량음료 판매량과 익사자수", xlab="청량음료 판매고", ylab="익사자수")
+text(x=8, y=8, labels=paste("r =", round(cor(sales.winter, drowns.winter), digits=2)))
+text(x=1, y=1, labels=paste("r =", round(cor(sales.summer, drowns.summer),2)))
+```
+
+## ggplots
+
+### Data reshaping

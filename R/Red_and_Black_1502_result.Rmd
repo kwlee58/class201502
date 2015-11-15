@@ -1,0 +1,14 @@
+---
+title: "Red_and_Black_1502"
+author: "coop711"
+date: "2015년 11월 18일"
+output: html_document
+---
+
+```{r, list, echo = FALSE}
+library(pander)
+library(knitr)
+load("../R/red_and_black_1502_data.rda")
+pander(red.black.df)
+# kable(red.black.df, align = c("c", "c", "c", "c"))
+```

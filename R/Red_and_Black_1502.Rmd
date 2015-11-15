@@ -1,0 +1,65 @@
+---
+title: "Red_and_Black_1502"
+author: "coop711"
+date: "2015년 11월 15일"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(pander)
+library(knitr)
+```
+
+```{r, data}
+getwd()
+load("../R/quiz_1109v2.rda")
+ls()
+rm(list=setdiff(ls(), "quiz1109.div"))
+class.roll.1502 <- quiz1109.div
+str(class.roll.1502)
+```
+
+```{r, randomization}
+set.seed(3)
+N <- nrow(class.roll.1502) 
+red.id <- sample(1:N, size=floor(N/2))
+red.id
+class.roll.1502$group <- factor(ifelse((1:N) %in% red.id, "red", "black"), levels = c("red", "black"))
+black.id<-(1:N)[-red.id]
+```
+
+```{r, id}
+ID.13<-factor(ifelse(substr(class.roll.1502$id, 1, 4) >= 2013, "younger.13", "older.13"), levels=c("younger.13", "older.13"))
+table("13학번 기준" = ID.13, "그룹" = class.roll.1502$group)
+ID.12<-factor(ifelse(substr(class.roll.1502$id, 1, 4) >= 2012, "younger.12", "older.12"), levels=c("younger.12", "older.12"))
+table("12학번 기준" = ID.12, "그룹" = class.roll.1502$group)
+ID.14<-factor(ifelse(substr(class.roll.1502$id, 1, 4) >= 2014, "younger.14", "older.14"), levels=c("younger.14", "older.14"))
+table("14학번 기준" = ID.14, "그룹" = class.roll.1502$group)
+```
+
+```{r, colleges}
+table("단과대학" = class.roll.1502$college, "그룹" = class.roll.1502$group)
+```
+
+```{r, list}
+(gr.id.o <- order(class.roll.1502$group, class.roll.1502$id))
+(id.by.gr <- class.roll.1502[gr.id.o, c("group", "id", "name")])
+(red.names <- id.by.gr[id.by.gr$group=="red", c("id", "name")])
+(black.names <- id.by.gr[id.by.gr$group=="black", c("id", "name")])
+# class.roll.1502[red.id, "id"]
+# class.roll.1502[black.id, "id"]
+# cbind(class.roll.1502[red.id, "id"], class.roll.1502[black.id, "id"])
+(red.black.df <- data.frame("Red" = red.names, "Black" = black.names, row.names = NULL))
+# names(red.black.df) <- c("Red", "Black")
+red.black.df
+# red.black.ID <- cbind(class.roll.1502[red.id, "id"], class.roll.1502[black.id, "id"])
+# dimnames(red.black.ID)[[2]] <- c("Red", "Black")
+# red.black.ID
+pander(red.black.df)
+kable(red.black.df, align = c("c", "c", "c", "c"))
+```
+
+```{r, save}
+save.image("../R/red_and_black_1502_data.rda")
+```

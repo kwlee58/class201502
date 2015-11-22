@@ -1,5 +1,5 @@
 ---
-title: "Quiz 1116"
+title: "Quiz 1116 by College"
 author: "coop711"
 date: "`r Sys.Date()`"
 output: html_document
@@ -9,7 +9,7 @@ output: html_document
 
 * 자료 구성
 
-```{r}
+```{r, data setting}
 library(xlsx)
 library(pander)
 library(ggplot2)
@@ -30,14 +30,39 @@ q.ans.asch <- factor(q.ans$Q4, levels=c("가", "나", "다", "라"), labels=c("1
      + 연기실험결과에 대한 인식 우수(정답률 82%) 
      + 스탠리 밀그램의 복종 실험에 대한 인식 우수(정답률 : 88%)
      + 솔로몬 애쉬의 가짜 시지각 실험에 대한 인식 우수(정답률 : 88%)
-     
-```{r}
+
+```{r, cross-tables}
+load("../R/quiz1028v2.rda")
+quiz1116.div <- data.frame(quiz1028.div[, 1:7], quiz1116[c("Q1", "Q2", "Q3", "Q4")])
+pander(table(quiz1116.div$college, quiz1116.div$Q1))
+pander(table(quiz1116.div$college, quiz1116.div$Q2))
+pander(table(quiz1116.div$college, quiz1116.div$Q3))
+pander(table(quiz1116.div$college, quiz1116.div$Q4))
+```
+
+```{r, mapply and xtabs}
+pander(mapply(function(x) xtabs(~college + x, data=quiz1116.div), quiz1116.div[c("Q1", "Q2", "Q3", "Q4")], SIMPLIFY = FALSE))
+```
+
+```{r, mosaicplots, fig.width = 6, fig.height = 6}
+mosaicplot(table("단과대학"=quiz1116.div$college, "Q1"=quiz1116.div$Q1), main="단과대학별 응답(Q1)")
+mosaicplot(table("단과대학"=quiz1116.div$college, "Q2"=quiz1116.div$Q2), main="단과대학별 응답(Q2)")
+mosaicplot(table("단과대학"=quiz1116.div$college, "Q3"=quiz1116.div$Q3), main="단과대학별 응답(Q3)")
+mosaicplot(table("단과대학"=quiz1116.div$college, "Q4"=quiz1116.div$Q4), main="단과대학별 응답(Q4)")
+```
+
+```{r, mapply with mosaicplot, fig.width = 6, fig.height = 6}
+mapply(function(x) mosaicplot(xtabs(~college + x, data=quiz1116.div), main=paste("단과대학별 응답(", dimnames(x)[[2]],")", sep=""), xlab = "단과대학", ylab = names(x)), quiz1116.div[c("Q1", "Q2", "Q3", "Q4")])
+```
+
+
+```{r, pander table}
 q.ans.tbl <- apply(q.ans, 2, table, useNA="ifany")
 pander(q.ans.tbl)
 pander(table(q.ans.lm3))
-pander(table(q.ans.latane.darley))
-pander(table(q.ans.milgram))
-pander(table(q.ans.asch))
+pander(table(q.ans.mtr.top.income))
+pander(table(q.ans.trickle.down))
+pander(table(q.ans.coop.agri))
 ```
 
 ## 답안 분석
@@ -47,7 +72,7 @@ pander(table(q.ans.asch))
 * 정답 구성
     + `mapply()`를 적용하기 위하여 정답을 `list`로 분리,  
 
-```{r}
+```{r, q.key as a list}
 q.key <- c("라", "가", "라", "다")
 (q.key.l <- split(q.key, f=paste("A", 1:4, sep="")))
 str(q.key.l)
@@ -106,7 +131,7 @@ title(main="11월 16일 퀴즈 결과", xlab="문항", ylab="인원")
 ```{r}
 barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
 title(main="11월 16일 퀴즈 결과", xlab="문항", ylab="인원")
-legend(x=0.35,y=55, legend=c("오답", "정답"), fill=c("red", "cyan"))
+legend(x=0.35, y=52, legend=c("오답", "정답"), fill=c("red", "cyan"))
 ```
 
 * 각 막대에 정답률(%) 표시
@@ -115,7 +140,7 @@ legend(x=0.35,y=55, legend=c("오답", "정답"), fill=c("red", "cyan"))
 ```{r}
 barplot(marks.tbl.2, col=c("cyan", "red"), names.arg = v.names)
 title(main="11월 16일 퀴즈 결과", xlab="문항", ylab="인원")
-legend(x=0.35, y=55, legend=c("오답", "정답"), fill=c("red", "cyan"))
+legend(x=0.35, y=52, legend=c("오답", "정답"), fill=c("red", "cyan"))
 text(x=c(0.75, 1.9, 3.1, 4.3), y=rep(10, 4), labels=paste(correct.ans.rate, "%", sep=""))
 ```
 
@@ -256,5 +281,5 @@ str(marks.tbl.long)
 ## 자료 갈무리
 
 ```{r, save.image}
-save.image("quiz_1116.rda")
+save.image("quiz_1116v2.rda")
 ```

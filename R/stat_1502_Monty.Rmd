@@ -1,0 +1,120 @@
+---
+title: "Monty Hall and Default Effects"
+author: "coop711"
+date: "`Sys.Date()`"
+output: html_document
+---
+
+Reading in Data
+---------------
+
+```{r}
+library(pander)
+panderOptions("table.split.table", Inf)
+options(width=180)
+library(xlsx)
+monty.default<-read.xlsx("../data/class_roll1118.xlsx", sheetIndex = 1, startRow = 3, endRow = 70, colIndex = c(4, 5, 10, 36:39), header = FALSE)
+names(monty.default) <- c("ID", "Name", "Color", "Monty_Hall", "Wason_1", "Wason_2", "Default")
+monty.default[, -2]
+```
+
+* `character` 중 `factor` 성격인 변수들을 재설정. `Default`의 경우 단순히 체크 여부를 `o`, `x` 로 표시한 것이므로 색깔별로 기증의사 여부를 다시 코딩.
+
+```{r}
+options(width=132)
+monty.default$Color<-factor(monty.default$Color, levels=c("빨강색", "검정색"), labels=c("Red", "Black"))
+Red <- monty.default$Color == "Red"
+Black <- monty.default$Color == "Black"
+monty.default$Monty_Hall <- factor(monty.default$Monty_Hall, levels=c("바꾼다", "아니다"), labels = c("Right", "Wrong"))
+Default.2 <- monty.default$Default
+Default.2[Red & (monty.default$Default == "x")] <- "Yes"
+Default.2[Red & (monty.default$Default == "o")] <- "No"
+Default.2[Black & (monty.default$Default == "x")] <- "No"
+Default.2[Black & (monty.default$Default == "o")] <- "Yes"
+Default.2 <- factor(Default.2, levels = c("Yes", "No"))
+monty.default$Default.2 <- Default.2
+monty.default[, -2]
+```
+
+* Wason Selection 문제의 응답을  "Right/Wrong"을 `label`로 갖는 `factor`로 재코딩.
+
+```{r, Wason.factor}
+monty.default$Wason_1.f <- factor(ifelse(monty.default$Wason_1 == "2장(A, 3)", "Right", "Wrong"))
+monty.default$Wason_2.f <- factor(ifelse(monty.default$Wason_2 == "17,beer", "Right", "Wrong"))
+str(monty.default)
+```
+
+* Monty Hall 문제의 응답을 앞/뒷면 별로 `table()`로 요약
+
+```{r}
+pander(tapply(monty.default$Monty_Hall, monty.default$Color, table))
+options(digits=2)
+pander(tapply(monty.default$Monty_Hall, monty.default$Color, function(x) prop.table(table(x))))
+```
+
+* data frame 으로 정리할 수 있도록 `aggregate()` 적용
+
+```{r, Monty Hall}
+ag.Monty <- aggregate(Monty_Hall~Color, data = monty.default, table)
+pander(xtabs(Monty_Hall~Color, ag.Monty))
+ag.Monty.p <- aggregate(Monty_Hall~Color, data = monty.default, function(x) prop.table(table(x)))
+pander(xtabs(Monty_Hall~Color, ag.Monty.p), caption = "Monty Hall", digits = 2)
+```
+
+* Wason Selection 문제의 응답을 색깔별로 `table()`로 요약
+
+```{r}
+pander(tapply(monty.default$Wason_1.f, monty.default$Color, table))
+pander(tapply(monty.default$Wason_2.f, monty.default$Color, table))
+```
+
+* data frame 으로 정리할 수 있도록 `aggregate()` 적용.  
+
+```{r, Wason Selection}
+ag.Wason.1 <- aggregate(Wason_1.f~Color, data=monty.default, table)
+pander(xtabs(Wason_1.f~Color, ag.Wason.1))
+pander(addmargins(xtabs(Wason_1.f~Color, ag.Wason.1), margin = 1))
+pander(prop.table(addmargins(xtabs(Wason_1.f~Color, ag.Wason.1), margin = 1), margin = 1), caption = "Wason Selection 1", digits = 2) 
+ag.Wason.1.p <- aggregate(Wason_1.f~Color, data=monty.default, function(x) prop.table(table(x)))
+pander(xtabs(Wason_1.f~Color, ag.Wason.1.p), caption = "Wason Selection 1", digits = 2)
+ag.Wason.2 <- aggregate(Wason_2.f~Color, data = monty.default, table)
+pander(xtabs(Wason_2.f~Color, ag.Wason.2))
+pander(addmargins(xtabs(Wason_2.f~Color, ag.Wason.2), margin = 1))
+pander(prop.table(addmargins(xtabs(Wason_2.f~Color, ag.Wason.2), margin = 1), margin = 1), caption = "Wason Selection 2", digits = 2) 
+ag.Wason.2.p <- aggregate(Wason_2.f~Color, data=monty.default, function(x) prop.table(table(x)))
+pander(xtabs(Wason_2.f~Color, ag.Wason.2.p), caption = "Wason Selection 2", digits = 2)
+```
+
+* 초기값 문제의 응답을 색깔 별로 `table()`로 요약
+
+```{r}
+pander(tapply(monty.default$Default.2, monty.default$Color, table))
+```
+
+* data frame 으로 정리할 수 있도록 `aggregate()` 적용
+
+```{r, default}
+ag.default <- aggregate(Default.2~Color, data = monty.default, table)
+pander(xtabs(Default.2~Color, ag.default))
+ag.default.p <- aggregate(Default.2~Color, data = monty.default, function(x)prop.table(table(x)))
+pander(xtabs(Default.2~Color, ag.default.p), caption = "디폴트 설정 문제", digits=2)
+```
+
+* `ddply()`를 사용할 수 있도록 `plyr` package 등록
+
+```{r}
+library(plyr)
+```
+
+* `ddply()` 활용.
+
+```{r}
+pander(ddply(data.frame(monty.default$Default.2), .(Color=monty.default$Color), table))
+pander(ddply(data.frame(monty.default$Default.2), .(Color=monty.default$Color), function(x) prop.table(table(x))))
+```
+
+* 정리
+
+```{r}
+save.image(file="monty_stat_1502.rda")
+```

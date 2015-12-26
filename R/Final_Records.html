@@ -66,8 +66,8 @@ img {
 </div>
 
 
-<div id="facebook-data" class="section level2">
-<h2>Facebook Data</h2>
+<div id="facebook-data" class="section level3">
+<h3>Facebook Data</h3>
 <pre class="r"><code>options(digits=3)
 library(xlsx)</code></pre>
 <pre><code>## Loading required package: rJava
@@ -505,8 +505,8 @@ kable(fb[c(&quot;ID&quot;, &quot;Name&quot;, &quot;Score&quot;)], align=c(&quot;
 </tbody>
 </table>
 </div>
-<div id="online-attendance" class="section level2">
-<h2>Online Attendance</h2>
+<div id="online-attendance" class="section level3">
+<h3>Online Attendance</h3>
 <pre class="r"><code>online &lt;- read.xlsx(file=&quot;../data/class_roll_online.xlsx&quot;, sheetIndex = 1, rowIndex = 3:70, colIndex = c(3:4, 11:12), header = FALSE, colClasses = rep(&quot;character&quot;, 4))
 v.names.online &lt;- c(&quot;ID&quot;, &quot;Name&quot;, &quot;Salk&quot;, &quot;Poll&quot;)
 names(online) &lt;- v.names.online
@@ -1004,8 +1004,8 @@ kable(online)</code></pre>
 </tbody>
 </table>
 </div>
-<div id="team-projects" class="section level2">
-<h2>Team Projects</h2>
+<div id="team-projects" class="section level3">
+<h3>Team Projects</h3>
 <pre class="r"><code>project &lt;- read.xlsx(file=&quot;../data/class_roll_project.xlsx&quot;, sheetIndex= 1, rowIndex = 2:70, colIndex = c(4:5, 10:30), colClasses = c(rep(&quot;character&quot;, 3), rep(&quot;numeric&quot;, 20)))
 # pander(project)
 team.score &lt;- round(colMeans(project[, -c(1:3, 21:23)], na.rm = TRUE), digits = 2)
@@ -1073,13 +1073,15 @@ pander(team.score)</code></pre>
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>project$Score &lt;- project$&quot;계&quot;*10
-kable(project[c(1:2, 24)])</code></pre>
+<pre class="r"><code># project$Score &lt;- project$&quot;계&quot;*10
+project$Score &lt;- team.score[match(project$&quot;조이름&quot;, names(team.score))]
+kable(project[c(1:3, 24)])</code></pre>
 <table>
 <thead>
 <tr class="header">
 <th align="left">학.직.번</th>
 <th align="left">이름</th>
+<th align="left">조이름</th>
 <th align="right">Score</th>
 </tr>
 </thead>
@@ -1087,345 +1089,414 @@ kable(project[c(1:2, 24)])</code></pre>
 <tr class="odd">
 <td align="left">20128005</td>
 <td align="left">ANGIRMAA GANBAT</td>
-<td align="right">69.2</td>
+<td align="left">통죽통살</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20113201</td>
 <td align="left">강용석</td>
-<td align="right">80.8</td>
+<td align="left">꼬집어주시급</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="odd">
 <td align="left">20152802</td>
 <td align="left">구준하</td>
-<td align="right">70.2</td>
+<td align="left">파워블로거</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20152652</td>
 <td align="left">권나라</td>
-<td align="right">0.0</td>
+<td align="left">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">20142510</td>
 <td align="left">권수경</td>
-<td align="right">70.2</td>
+<td align="left">파워블로거</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20121103</td>
 <td align="left">권순영</td>
-<td align="right">71.6</td>
+<td align="left">통계에살어리랏다</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20154307</td>
 <td align="left">권유민</td>
-<td align="right">54.1</td>
+<td align="left">체육학부</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="even">
 <td align="left">20093404</td>
 <td align="left">김건우</td>
-<td align="right">70.0</td>
+<td align="left">빚을비추다</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="odd">
 <td align="left">20151401</td>
 <td align="left">김건재</td>
-<td align="right">70.2</td>
+<td align="left">잡았다요놈</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20112405</td>
 <td align="left">김동휘</td>
-<td align="right">80.8</td>
+<td align="left">꼬집어주시급</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="odd">
 <td align="left">20113207</td>
 <td align="left">김병우</td>
-<td align="right">62.2</td>
+<td align="left">사장님나빠요</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="even">
 <td align="left">20095315</td>
 <td align="left">김석겸</td>
-<td align="right">62.2</td>
+<td align="left">사장님나빠요</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="odd">
 <td align="left">20121109</td>
 <td align="left">김세훈</td>
-<td align="right">71.6</td>
+<td align="left">통계에살어리랏다</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20132519</td>
 <td align="left">김소연</td>
-<td align="right">65.0</td>
+<td align="left">넌얼마나쓰니</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20123118</td>
 <td align="left">김원규</td>
-<td align="right">71.6</td>
+<td align="left">통계온라인</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20123121</td>
 <td align="left">김종헌</td>
-<td align="right">77.4</td>
+<td align="left">통계적성문화</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="odd">
 <td align="left">20134322</td>
 <td align="left">김준수</td>
-<td align="right">54.1</td>
+<td align="left">체육학부</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="even">
 <td align="left">20144313</td>
 <td align="left">김중훈</td>
-<td align="right">54.1</td>
+<td align="left">체육학부</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="odd">
 <td align="left">20123125</td>
 <td align="left">김지훈</td>
-<td align="right">77.4</td>
+<td align="left">통계적성문화</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="even">
 <td align="left">20154322</td>
 <td align="left">김진수</td>
-<td align="right">54.1</td>
+<td align="left">체육학부</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="odd">
 <td align="left">20144316</td>
 <td align="left">김형민</td>
-<td align="right">54.1</td>
+<td align="left">체육학부</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="even">
 <td align="left">20142540</td>
 <td align="left">김혜림</td>
-<td align="right">70.2</td>
+<td align="left">파워블로거</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="odd">
 <td align="left">20132841</td>
 <td align="left">남현익</td>
-<td align="right">62.2</td>
+<td align="left">사장님나빠요</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="even">
 <td align="left">20132726</td>
 <td align="left">노현세</td>
-<td align="right">57.9</td>
+<td align="left">우리이혼했어요</td>
+<td align="right">5.79</td>
 </tr>
 <tr class="odd">
 <td align="left">20121212</td>
 <td align="left">박다혜</td>
-<td align="right">69.2</td>
+<td align="left">통죽통살</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20142849</td>
 <td align="left">박미진</td>
-<td align="right">70.0</td>
+<td align="left">빚을비추다</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="odd">
 <td align="left">20112560</td>
 <td align="left">박소연</td>
-<td align="right">80.8</td>
+<td align="left">꼬집어주시급</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="even">
 <td align="left">20121117</td>
 <td align="left">박송이</td>
-<td align="right">71.6</td>
+<td align="left">통계에살어리랏다</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20142321</td>
 <td align="left">박수민</td>
-<td align="right">70.0</td>
+<td align="left">빚을비추다</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="even">
 <td align="left">20112851</td>
 <td align="left">박영균</td>
-<td align="right">62.9</td>
+<td align="left">트래블메이트</td>
+<td align="right">6.29</td>
 </tr>
 <tr class="odd">
 <td align="left">20155224</td>
 <td align="left">박준형</td>
-<td align="right">70.2</td>
+<td align="left">잡았다요놈</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20125136</td>
 <td align="left">박지현</td>
-<td align="right">70.0</td>
+<td align="left">빚을비추다</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="odd">
 <td align="left">20135134</td>
 <td align="left">박진성</td>
-<td align="right">57.9</td>
+<td align="left">우리이혼했어요</td>
+<td align="right">5.79</td>
 </tr>
 <tr class="even">
 <td align="left">20152543</td>
 <td align="left">방선주</td>
-<td align="right">65.0</td>
+<td align="left">통계덕후</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20141714</td>
 <td align="left">방승환</td>
-<td align="right">71.7</td>
+<td align="left">돈없다고전해라</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="even">
 <td align="left">20134336</td>
 <td align="left">변광은</td>
-<td align="right">54.1</td>
+<td align="left">체육학부</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="odd">
 <td align="left">20131312</td>
 <td align="left">서연화</td>
-<td align="right">74.7</td>
+<td align="left">갑작스런인연</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="even">
 <td align="left">20153130</td>
 <td align="left">서원민</td>
-<td align="right">71.6</td>
+<td align="left">통계온라인</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20102873</td>
 <td align="left">서진혁</td>
-<td align="right">69.2</td>
+<td align="left">통죽통살</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20152863</td>
 <td align="left">신민주</td>
-<td align="right">74.7</td>
+<td align="left">갑작스런인연</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="odd">
 <td align="left">20153824</td>
 <td align="left">신상윤</td>
-<td align="right">80.8</td>
+<td align="left">꼬집어주시급</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="even">
 <td align="left">20152550</td>
 <td align="left">신수진</td>
-<td align="right">65.0</td>
+<td align="left">통계덕후</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20152864</td>
 <td align="left">신승도</td>
-<td align="right">71.7</td>
+<td align="left">돈없다고전해라</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="even">
 <td align="left">20112220</td>
 <td align="left">신진섭</td>
-<td align="right">62.9</td>
+<td align="left">트래블메이트</td>
+<td align="right">6.29</td>
 </tr>
 <tr class="odd">
 <td align="left">20125150</td>
 <td align="left">엄승호</td>
-<td align="right">65.0</td>
+<td align="left">넌얼마나쓰니</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="even">
 <td align="left">20112748</td>
 <td align="left">오민호</td>
-<td align="right">71.6</td>
+<td align="left">통계온라인</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20125154</td>
 <td align="left">오원준</td>
-<td align="right">65.0</td>
+<td align="left">넌얼마나쓰니</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="even">
 <td align="left">20152220</td>
 <td align="left">오준승</td>
-<td align="right">80.8</td>
+<td align="left">꼬집어주시급</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="odd">
 <td align="left">20132886</td>
 <td align="left">오현우</td>
-<td align="right">0.0</td>
+<td align="left">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">20122889</td>
 <td align="left">윤태훈</td>
-<td align="right">0.0</td>
+<td align="left">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">20152879</td>
 <td align="left">이동근</td>
-<td align="right">62.9</td>
+<td align="left">트래블메이트</td>
+<td align="right">6.29</td>
 </tr>
 <tr class="even">
 <td align="left">20152564</td>
 <td align="left">이슬</td>
-<td align="right">65.0</td>
+<td align="left">넌얼마나쓰니</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20122229</td>
 <td align="left">이완</td>
-<td align="right">70.2</td>
+<td align="left">잡았다요놈</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20152574</td>
 <td align="left">이채연</td>
-<td align="right">65.0</td>
+<td align="left">통계덕후</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20113152</td>
 <td align="left">이춘구</td>
-<td align="right">69.2</td>
+<td align="left">통죽통살</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20153839</td>
 <td align="left">이한영</td>
-<td align="right">71.7</td>
+<td align="left">돈없다고전해라</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="odd">
 <td align="left">20152575</td>
 <td align="left">이현정</td>
-<td align="right">65.0</td>
+<td align="left">통계덕후</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="even">
 <td align="left">20152898</td>
 <td align="left">장민서</td>
-<td align="right">74.7</td>
+<td align="left">갑작스런인연</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="odd">
 <td align="left">20123160</td>
 <td align="left">전민재</td>
-<td align="right">77.4</td>
+<td align="left">통계적성문화</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="even">
 <td align="left">20113242</td>
 <td align="left">정상욱</td>
-<td align="right">62.2</td>
+<td align="left">사장님나빠요</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="odd">
 <td align="left">20111733</td>
 <td align="left">조왕현</td>
-<td align="right">71.6</td>
+<td align="left">통계온라인</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20135178</td>
 <td align="left">조현겸</td>
-<td align="right">57.9</td>
+<td align="left">우리이혼했어요</td>
+<td align="right">5.79</td>
 </tr>
 <tr class="odd">
 <td align="left">20123171</td>
 <td align="left">한재혁</td>
-<td align="right">77.4</td>
+<td align="left">통계적성문화</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="even">
 <td align="left">20153857</td>
 <td align="left">한혜은</td>
-<td align="right">71.7</td>
+<td align="left">돈없다고전해라</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="odd">
 <td align="left">20112242</td>
 <td align="left">현정철</td>
-<td align="right">74.7</td>
+<td align="left">갑작스런인연</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="even">
 <td align="left">20142942</td>
 <td align="left">홍순상</td>
-<td align="right">70.2</td>
+<td align="left">파워블로거</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="odd">
 <td align="left">20141140</td>
 <td align="left">황수정</td>
-<td align="right">71.6</td>
+<td align="left">통계에살어리랏다</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20122952</td>
 <td align="left">황승수</td>
-<td align="right">67.0</td>
+<td align="left">황승수</td>
+<td align="right">6.70</td>
 </tr>
 </tbody>
 </table>
+</div>
 <div id="integration" class="section level3">
 <h3>Integration</h3>
 <pre class="r"><code>fb.score &lt;- fb[, &quot;Score&quot;]
@@ -1449,476 +1520,476 @@ kable(scores)</code></pre>
 <td align="left">ANGIRMAA GANBAT</td>
 <td align="right">8.33</td>
 <td align="right">25</td>
-<td align="right">69.2</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20113201</td>
 <td align="left">강용석</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">80.8</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="odd">
 <td align="left">20152802</td>
 <td align="left">구준하</td>
 <td align="right">16.67</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20152652</td>
 <td align="left">권나라</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">0.0</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">20142510</td>
 <td align="left">권수경</td>
 <td align="right">66.67</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20121103</td>
 <td align="left">권순영</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20154307</td>
 <td align="left">권유민</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">54.1</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="even">
 <td align="left">20093404</td>
 <td align="left">김건우</td>
 <td align="right">0.00</td>
 <td align="right">50</td>
-<td align="right">70.0</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="odd">
 <td align="left">20151401</td>
 <td align="left">김건재</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20112405</td>
 <td align="left">김동휘</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">80.8</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="odd">
 <td align="left">20113207</td>
 <td align="left">김병우</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">62.2</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="even">
 <td align="left">20095315</td>
 <td align="left">김석겸</td>
 <td align="right">50.00</td>
 <td align="right">100</td>
-<td align="right">62.2</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="odd">
 <td align="left">20121109</td>
 <td align="left">김세훈</td>
 <td align="right">66.67</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20132519</td>
 <td align="left">김소연</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20123118</td>
 <td align="left">김원규</td>
 <td align="right">58.33</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20123121</td>
 <td align="left">김종헌</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">77.4</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="odd">
 <td align="left">20134322</td>
 <td align="left">김준수</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">54.1</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="even">
 <td align="left">20144313</td>
 <td align="left">김중훈</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">54.1</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="odd">
 <td align="left">20123125</td>
 <td align="left">김지훈</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">77.4</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="even">
 <td align="left">20154322</td>
 <td align="left">김진수</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">54.1</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="odd">
 <td align="left">20144316</td>
 <td align="left">김형민</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">54.1</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="even">
 <td align="left">20142540</td>
 <td align="left">김혜림</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="odd">
 <td align="left">20132841</td>
 <td align="left">남현익</td>
 <td align="right">41.67</td>
 <td align="right">100</td>
-<td align="right">62.2</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="even">
 <td align="left">20132726</td>
 <td align="left">노현세</td>
 <td align="right">16.67</td>
 <td align="right">100</td>
-<td align="right">57.9</td>
+<td align="right">5.79</td>
 </tr>
 <tr class="odd">
 <td align="left">20121212</td>
 <td align="left">박다혜</td>
 <td align="right">25.00</td>
 <td align="right">100</td>
-<td align="right">69.2</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20142849</td>
 <td align="left">박미진</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">70.0</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="odd">
 <td align="left">20112560</td>
 <td align="left">박소연</td>
 <td align="right">75.00</td>
 <td align="right">100</td>
-<td align="right">80.8</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="even">
 <td align="left">20121117</td>
 <td align="left">박송이</td>
 <td align="right">91.67</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20142321</td>
 <td align="left">박수민</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">70.0</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="even">
 <td align="left">20112851</td>
 <td align="left">박영균</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">62.9</td>
+<td align="right">6.29</td>
 </tr>
 <tr class="odd">
 <td align="left">20155224</td>
 <td align="left">박준형</td>
 <td align="right">33.33</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20125136</td>
 <td align="left">박지현</td>
 <td align="right">41.67</td>
 <td align="right">100</td>
-<td align="right">70.0</td>
+<td align="right">7.00</td>
 </tr>
 <tr class="odd">
 <td align="left">20135134</td>
 <td align="left">박진성</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">57.9</td>
+<td align="right">5.79</td>
 </tr>
 <tr class="even">
 <td align="left">20152543</td>
 <td align="left">방선주</td>
 <td align="right">25.00</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20141714</td>
 <td align="left">방승환</td>
 <td align="right">91.67</td>
 <td align="right">100</td>
-<td align="right">71.7</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="even">
 <td align="left">20134336</td>
 <td align="left">변광은</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">54.1</td>
+<td align="right">5.41</td>
 </tr>
 <tr class="odd">
 <td align="left">20131312</td>
 <td align="left">서연화</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">74.7</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="even">
 <td align="left">20153130</td>
 <td align="left">서원민</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20102873</td>
 <td align="left">서진혁</td>
 <td align="right">66.67</td>
 <td align="right">100</td>
-<td align="right">69.2</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20152863</td>
 <td align="left">신민주</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">74.7</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="odd">
 <td align="left">20153824</td>
 <td align="left">신상윤</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">80.8</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="even">
 <td align="left">20152550</td>
 <td align="left">신수진</td>
 <td align="right">8.33</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20152864</td>
 <td align="left">신승도</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">71.7</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="even">
 <td align="left">20112220</td>
 <td align="left">신진섭</td>
 <td align="right">50.00</td>
 <td align="right">100</td>
-<td align="right">62.9</td>
+<td align="right">6.29</td>
 </tr>
 <tr class="odd">
 <td align="left">20125150</td>
 <td align="left">엄승호</td>
 <td align="right">91.67</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="even">
 <td align="left">20112748</td>
 <td align="left">오민호</td>
 <td align="right">91.67</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="odd">
 <td align="left">20125154</td>
 <td align="left">오원준</td>
 <td align="right">25.00</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="even">
 <td align="left">20152220</td>
 <td align="left">오준승</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">80.8</td>
+<td align="right">8.08</td>
 </tr>
 <tr class="odd">
 <td align="left">20132886</td>
 <td align="left">오현우</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">0.0</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">20122889</td>
 <td align="left">윤태훈</td>
 <td align="right">0.00</td>
 <td align="right">0</td>
-<td align="right">0.0</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">20152879</td>
 <td align="left">이동근</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">62.9</td>
+<td align="right">6.29</td>
 </tr>
 <tr class="even">
 <td align="left">20152564</td>
 <td align="left">이슬</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20122229</td>
 <td align="left">이완</td>
 <td align="right">75.00</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="even">
 <td align="left">20152574</td>
 <td align="left">이채연</td>
 <td align="right">25.00</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="odd">
 <td align="left">20113152</td>
 <td align="left">이춘구</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">69.2</td>
+<td align="right">6.92</td>
 </tr>
 <tr class="even">
 <td align="left">20153839</td>
 <td align="left">이한영</td>
 <td align="right">0.00</td>
 <td align="right">75</td>
-<td align="right">71.7</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="odd">
 <td align="left">20152575</td>
 <td align="left">이현정</td>
 <td align="right">8.33</td>
 <td align="right">100</td>
-<td align="right">65.0</td>
+<td align="right">6.50</td>
 </tr>
 <tr class="even">
 <td align="left">20152898</td>
 <td align="left">장민서</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">74.7</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="odd">
 <td align="left">20123160</td>
 <td align="left">전민재</td>
 <td align="right">33.33</td>
 <td align="right">100</td>
-<td align="right">77.4</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="even">
 <td align="left">20113242</td>
 <td align="left">정상욱</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">62.2</td>
+<td align="right">6.22</td>
 </tr>
 <tr class="odd">
 <td align="left">20111733</td>
 <td align="left">조왕현</td>
 <td align="right">83.33</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20135178</td>
 <td align="left">조현겸</td>
 <td align="right">0.00</td>
 <td align="right">100</td>
-<td align="right">57.9</td>
+<td align="right">5.79</td>
 </tr>
 <tr class="odd">
 <td align="left">20123171</td>
 <td align="left">한재혁</td>
 <td align="right">91.67</td>
 <td align="right">100</td>
-<td align="right">77.4</td>
+<td align="right">7.74</td>
 </tr>
 <tr class="even">
 <td align="left">20153857</td>
 <td align="left">한혜은</td>
 <td align="right">8.33</td>
 <td align="right">100</td>
-<td align="right">71.7</td>
+<td align="right">7.17</td>
 </tr>
 <tr class="odd">
 <td align="left">20112242</td>
 <td align="left">현정철</td>
 <td align="right">100.00</td>
 <td align="right">100</td>
-<td align="right">74.7</td>
+<td align="right">5.47</td>
 </tr>
 <tr class="even">
 <td align="left">20142942</td>
 <td align="left">홍순상</td>
 <td align="right">25.00</td>
 <td align="right">100</td>
-<td align="right">70.2</td>
+<td align="right">7.02</td>
 </tr>
 <tr class="odd">
 <td align="left">20141140</td>
 <td align="left">황수정</td>
 <td align="right">75.00</td>
 <td align="right">100</td>
-<td align="right">71.6</td>
+<td align="right">7.16</td>
 </tr>
 <tr class="even">
 <td align="left">20122952</td>
 <td align="left">황승수</td>
 <td align="right">16.67</td>
 <td align="right">100</td>
-<td align="right">67.0</td>
+<td align="right">6.70</td>
 </tr>
 </tbody>
 </table>
@@ -4508,6 +4579,8 @@ kable(total.order)</code></pre>
 </tbody>
 </table>
 </div>
+<div id="save-data" class="section level3">
+<h3>Save Data</h3>
 </div>
 
 

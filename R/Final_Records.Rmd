@@ -7,9 +7,10 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 options(width=180)
+rm(list=ls())
 ```
 
-## Facebook Data
+### Facebook Data
 
 ```{r facebook}
 options(digits=3)
@@ -28,7 +29,7 @@ fb$Score <- fb$sum*100/n.fb
 kable(fb[c("ID", "Name", "Score")], align=c("c", "c", "r"))
 ```
 
-## Online Attendance
+### Online Attendance
 
 ```{r Online Attendance}
 online <- read.xlsx(file="../data/class_roll_online.xlsx", sheetIndex = 1, rowIndex = 3:70, colIndex = c(3:4, 11:12), header = FALSE, colClasses = rep("character", 4))
@@ -40,15 +41,16 @@ online$Score <- rowSums(score)
 kable(online)
 ```
 
-## Team Projects
+### Team Projects
 
 ```{r Team Projects}
 project <- read.xlsx(file="../data/class_roll_project.xlsx", sheetIndex= 1, rowIndex = 2:70, colIndex = c(4:5, 10:30), colClasses = c(rep("character", 3), rep("numeric", 20)))
 # pander(project)
 team.score <- round(colMeans(project[, -c(1:3, 21:23)], na.rm = TRUE), digits = 2)
 pander(team.score)
-project$Score <- project$"계"*10
-kable(project[c(1:2, 24)])
+# project$Score <- project$"계"*10
+project$Score <- team.score[match(project$"조이름", names(team.score))]
+kable(project[c(1:3, 24)])
 ```
 
 ### Integration
@@ -76,4 +78,10 @@ total.order$Ranks <- N + 1 - rank(total.order$Total)
 total.order$Grades <- ifelse(total.order$Ranks <= floor(67*0.3), "A+", ifelse(total.order$Ranks <= floor(67*0.6), "B+", "C+"))
 kable(total.order)
 ```
-                   
+
+### Save Data
+
+```{r Save Data, echo = FALSE}
+save.image(file = "../R/final_data.rda")
+```
+               

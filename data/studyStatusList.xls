@@ -1,0 +1,7207 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<script language=javascript>
+
+	var commonResultMessage = "null";
+	if(commonResultMessage=="" || commonResultMessage=="null") {
+		commonResultMessage = "null";
+	}
+	var localeKey = "ko";
+</script>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>study_status</title>
+</head>
+<body>
+과목명 : <b>생활속의통계학(005036)</b>
+<br>
+교수명 : <b>이기원</b>
+<br>
+<form name="studyForm" method="post" action="/Study.do">
+<input type="hidden" name="boardCnt" value="5">
+
+	<table width="99%" border="1" cellspacing="0" cellpadding="0" >
+	<tr align="center">
+		<td width="40">No</td>
+		<td width="100">소속</td>
+		<td width="90">성명</td>
+		<td width="100">No</td>
+		
+		 
+		<td width="170">공지사항<br>등록&nbsp;/&nbsp;답변&nbsp;/&nbsp;덧글</td>
+		 
+		<td width="170">발표자료<br>등록&nbsp;/&nbsp;답변&nbsp;/&nbsp;덧글</td>
+		 
+		<td width="170">질의응답<br>등록&nbsp;/&nbsp;답변&nbsp;/&nbsp;덧글</td>
+		 
+		<td width="170">팀구성 게시판<br>등록&nbsp;/&nbsp;답변&nbsp;/&nbsp;덧글</td>
+		 
+		
+		<td width="170">토론<br>등록&nbsp;/&nbsp;답변&nbsp;/&nbsp;덧글</td>
+		<td width="170">프로젝트<br>등록&nbsp;/&nbsp;답변&nbsp;/&nbsp;덧글</td>
+    	<td width="100">진도율</td>
+     </tr>
+  	 
+     
+	 
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">1</td>
+		<td height="30">전자물리학과</td>
+		<td>김건우</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20093404
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>35.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">2</td>
+		<td height="30">전자공학과</td>
+		<td>김석겸</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20095315
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">3</td>
+		<td height="30">경영학</td>
+		<td>서진혁</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20102873
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">4</td>
+		<td height="30">러시아학과</td>
+		<td>조왕현</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20111733
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">5</td>
+		<td height="30">사회학과</td>
+		<td>신진섭</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20112220
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">6</td>
+		<td height="30">사회학과</td>
+		<td>현정철</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20112242
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">7</td>
+		<td height="30">정치행정학과</td>
+		<td>김동휘</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20112405
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 5 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">8</td>
+		<td height="30">언론</td>
+		<td>박소연</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20112560
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 2	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">9</td>
+		<td height="30">법학</td>
+		<td>오민호</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20112748
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 2	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">10</td>
+		<td height="30">경영학</td>
+		<td>박영균</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20112851
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">11</td>
+		<td height="30">경제학과</td>
+		<td>이춘구</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20113152
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">12</td>
+		<td height="30">재무금융학과</td>
+		<td>강용석</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20113201
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>60.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">13</td>
+		<td height="30">재무금융학과</td>
+		<td>김병우</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20113207
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">14</td>
+		<td height="30">재무금융학과</td>
+		<td>정상욱</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20113242
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">15</td>
+		<td height="30">국어국문학과</td>
+		<td>권순영</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20121103
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">16</td>
+		<td height="30">국어국문학과</td>
+		<td>김세훈</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20121109
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>90.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">17</td>
+		<td height="30">국어국문학과</td>
+		<td>박송이</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20121117
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">18</td>
+		<td height="30">영어영문학과</td>
+		<td>박다혜</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20121212
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>90.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">19</td>
+		<td height="30">사회학과</td>
+		<td>이완</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20122229
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 5 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>75.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">20</td>
+		<td height="30">경영학부</td>
+		<td>윤태훈</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20122889
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">21</td>
+		<td height="30">경영학부</td>
+		<td>황승수</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20122952
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>70.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">22</td>
+		<td height="30">경제학과</td>
+		<td>김원규</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20123118
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">23</td>
+		<td height="30">경제학과</td>
+		<td>김종헌</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20123121
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">24</td>
+		<td height="30">경제학과</td>
+		<td>김지훈</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20123125
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">25</td>
+		<td height="30">경제학과</td>
+		<td>전민재</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20123160
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">26</td>
+		<td height="30">경제학과</td>
+		<td>한재혁</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20123171
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">27</td>
+		<td height="30">컴퓨터공학과</td>
+		<td>박지현</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20125136
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">28</td>
+		<td height="30">컴퓨터공학과</td>
+		<td>엄승호</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20125150
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">29</td>
+		<td height="30">컴퓨터공학과</td>
+		<td>오원준</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20125154
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">30</td>
+		<td height="30">언론</td>
+		<td>ANGIRMAA GANBAT</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20128005
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>15.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">31</td>
+		<td height="30">철학과</td>
+		<td>서연화</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20131312
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">32</td>
+		<td height="30">방송통신</td>
+		<td>김소연</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20132519
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">33</td>
+		<td height="30">법학</td>
+		<td>노현세</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20132726
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>70.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">34</td>
+		<td height="30">경영학부</td>
+		<td>남현익</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20132841
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">35</td>
+		<td height="30">경영학부</td>
+		<td>오현우</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20132886
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">36</td>
+		<td height="30">체육학</td>
+		<td>김준수</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20134322
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">37</td>
+		<td height="30">체육학</td>
+		<td>변광은</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20134336
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">38</td>
+		<td height="30">컴퓨터공학과</td>
+		<td>박진성</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20135134
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">39</td>
+		<td height="30">컴퓨터공학과</td>
+		<td>조현겸</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20135178
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">40</td>
+		<td height="30">국어국문학과</td>
+		<td>황수정</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20141140
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">41</td>
+		<td height="30">러시아학과</td>
+		<td>방승환</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20141714
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">42</td>
+		<td height="30">사회복지학부</td>
+		<td>박수민</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20142321
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">43</td>
+		<td height="30">디지털콘텐츠</td>
+		<td>권수경</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20142510
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>90.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">44</td>
+		<td height="30">디지털콘텐츠</td>
+		<td>김혜림</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20142540
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>60.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">45</td>
+		<td height="30">경영학부</td>
+		<td>박미진</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20142849
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">46</td>
+		<td height="30">경영학부</td>
+		<td>홍순상</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20142942
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">47</td>
+		<td height="30">체육학</td>
+		<td>김중훈</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20144313
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">48</td>
+		<td height="30">체육학</td>
+		<td>김형민</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20144316
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">49</td>
+		<td height="30">사학과</td>
+		<td>김건재</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20151401
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">50</td>
+		<td height="30">사회학과</td>
+		<td>오준승</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152220
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>70.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">51</td>
+		<td height="30">언론정보학부</td>
+		<td>방선주</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152543
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>70.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">52</td>
+		<td height="30">언론정보학부</td>
+		<td>신수진</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152550
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">53</td>
+		<td height="30">언론정보학부</td>
+		<td>이슬</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152564
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">54</td>
+		<td height="30">언론정보학부</td>
+		<td>이채연</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152574
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>85.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">55</td>
+		<td height="30">언론정보학부</td>
+		<td>이현정</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152575
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>90.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">56</td>
+		<td height="30">광고홍보학과</td>
+		<td>권나라</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152652
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">57</td>
+		<td height="30">경영학부</td>
+		<td>구준하</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152802
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>60.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">58</td>
+		<td height="30">경영학부</td>
+		<td>신민주</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152863
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>40.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">59</td>
+		<td height="30">경영학부</td>
+		<td>신승도</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152864
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>90.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">60</td>
+		<td height="30">경영학부</td>
+		<td>이동근</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152879
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">61</td>
+		<td height="30">경영학부</td>
+		<td>장민서</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20152898
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>60.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">62</td>
+		<td height="30">경제학과</td>
+		<td>서원민</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20153130
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">63</td>
+		<td height="30">바이오메디컬학과</td>
+		<td>신상윤</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20153824
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 2	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>85.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">64</td>
+		<td height="30">바이오메디컬학과</td>
+		<td>이한영</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20153839
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 3 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>60.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">65</td>
+		<td height="30">바이오메디컬학과</td>
+		<td>한혜은</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20153857
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">66</td>
+		<td height="30">체육학부</td>
+		<td>권유민</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20154307
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 4 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">67</td>
+		<td height="30">체육학부</td>
+		<td>김진수</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20154322
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>0.0%</td>
+			
+			</tr>
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	 	<tr align="center">
+		<td height="30">68</td>
+		<td height="30">전자공학과</td>
+		<td>박준형</td>
+		<td style="mso-number-format:'@';" align='center' colspan='1'>
+			20155224
+		</td>	
+		
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>		
+		  
+    
+		
+			
+			
+	 		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<td style="mso-number-format:'@';" align='center'> 1 / 0 / 1	</td>		
+			<td style="mso-number-format:'@';" align='center'> 2 / 0 / 0	</td>		
+			<td style="mso-number-format:'@';" align='center'> 0 / 0 / 0	</td>
+			<td style="mso-number-format:'@';" align='center'>100.0%</td>
+			
+			</tr>
+		  
+    
+      
+
+      
+	  </table>
+</form>	
+</table>	
+</body>
+</html>

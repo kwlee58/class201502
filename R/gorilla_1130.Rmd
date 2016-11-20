@@ -83,7 +83,6 @@ pander(t(matrix(paste(format(prop.table(tbl.door.study)*100, digits = 3, nsmall 
 
 ```{r, chocolate}
 pander(summary(gorilla.chocolate), caption = "몇 개나 줄 거예요?")
-pander(table(gorilla.chocolate), caption = "몇 개나 줄 거예요?")
 ```
 
 

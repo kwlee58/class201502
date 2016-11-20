@@ -1,5 +1,5 @@
 ---
-title: "Invisible Gorilla 201512"
+title: "Invisible Gorilla 201502"
 author: "coop711"
 date: "`r Sys.Date()`"
 output: html_document
@@ -34,21 +34,54 @@ gorilla.door.study <- factor(gorilla$Q4, levels=c("가", "나"), labels=c("네",
 gorilla.chocolate <- as.numeric(gorilla$Q5)
 ```
 
-### 응답 결과
+### 동과 서
 
-```{r, responses}
+```{r, east vs west}
 pander(table(gorilla.monkey.banana), caption = "두 개를 고른다면?")
 pander(table(gorilla.still.happy), caption = "여전히 행복한가요?")
 pander(table(gorilla.front), caption = "어느 것이 앞쪽에 있나요?")
+pander(table(gorilla.front, gorilla.monkey.banana), caption = "어느 것이 앞에 있는지와 두 개를 고른다면")
+```
+
+### Invisible Gorilla
+
+#### Selective Attention Test
+
+```{r, SAT}
 pander(summary(gorilla.pass.1), caption = "흰 셔츠 팀의 패스 성공횟수는?")
 pander(table(gorilla.pass.1), caption = "흰 셔츠 팀의 패스 성공횟수는?")
 pander(table(gorilla.gorilla.1), caption = "고릴라 본 사람?")
+tbl.gorilla.1 <- table(gorilla.gorilla.1)
+pander(t(matrix(paste(format(prop.table(tbl.gorilla.1)*100, digits = 3, nsmall = 1), "%", sep = ""), nrow = dim(tbl.gorilla.1)[1], dimnames = dimnames(tbl.gorilla.1))))
+```
+
+#### Monkey Business Illusion
+
+```{r, MBI}
 pander(summary(gorilla.pass.2), caption = "흰 셔츠 팀의 패스 성공횟수는?")
 pander(table(gorilla.pass.2), caption = "흰 셔츠 팀의 패스 성공횟수는?")
-pander(table(gorilla.gorilla.2), caption = "고릴라 본 사람?")
-pander(table(gorilla.curtain.color), caption = "커튼 색 바뀐 것 본 사람?")
-pander(table(gorilla.player.exit), caption = "선수 나가는 것 본 사람?")
-pander(table(gorilla.door.study), caption = "길 묻는 사람 바뀐 것 눈치챈 사람?")
+tbl.gorilla.2 <- table(gorilla.gorilla.2)
+pander(tbl.gorilla.2, caption = "고릴라 본 사람?")
+pander(t(matrix(paste(format(prop.table(tbl.gorilla.2)*100, digits = 3, nsmall = 1), "%", sep = ""), nrow = dim(tbl.gorilla.2)[1], dimnames = dimnames(tbl.gorilla.2))))
+tbl.curtain.color <- table(gorilla.curtain.color)
+pander(tbl.curtain.color, caption = "커튼 색 바뀐 것 본 사람?")
+pander(t(matrix(paste(format(prop.table(tbl.curtain.color)*100, digits = 3, nsmall = 1), "%", sep = ""), nrow = dim(tbl.curtain.color)[1], dimnames = dimnames(tbl.curtain.color))))
+tbl.player.exit <- table(gorilla.player.exit)
+pander(tbl.player.exit, caption = "선수 나가는 것 본 사람?")
+pander(t(matrix(paste(format(prop.table(tbl.player.exit)*100, digits = 3, nsmall = 1), "%", sep = ""), nrow = dim(tbl.player.exit)[1], dimnames = dimnames(tbl.player.exit))))
+```
+
+### Door Study
+
+```{r, door}
+tbl.door.study <- table(gorilla.door.study)
+pander(tbl.door.study, caption = "길 묻는 사람 바뀐 것 눈치챈 사람?")
+pander(t(matrix(paste(format(prop.table(tbl.door.study)*100, digits = 3, nsmall = 1), "%", sep = ""), nrow = dim(tbl.door.study)[1], dimnames = dimnames(tbl.door.study))))
+```
+
+### Chocolate Study
+
+```{r, chocolate}
 pander(summary(gorilla.chocolate), caption = "몇 개나 줄 거예요?")
 pander(table(gorilla.chocolate), caption = "몇 개나 줄 거예요?")
 ```

@@ -1,10 +1,11 @@
 ---
-title: "Class_BFI_MI"
+title: "Big Five Personality 201502"
 author: "coop711"
-date: "2015년 6월 2일"
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
+<!--
 Data Reading
 ------------
 
@@ -85,13 +86,17 @@ pander(BFI.level.kr.2)
 ```
 
 각 성질의 분포를 `table`로 요약
+-->
 
-```{r}
+### 성격유형 분포
+
+```{r, echo = FALSE}
 BFI.level.table<-sapply(BFI.level.kr, table)
-pander(BFI.level.table)
-kable(BFI.level.table)
+pander(BFI.level.table[4:1, ])
+# kable(BFI.level.table)
 ```
 
+<!--
 출석부에 합치기
 ---------------
 
@@ -173,6 +178,17 @@ Merge 2 data frames into one
 BFI.MI.full<-data.frame(BFI.full.kr, MI.sort.full.kr[, 3:5])
 pander(BFI.MI.full[, -2])
 ```
+-->
+
+### 3대 강점지능 요약
+
+```{r, echo = FALSE}
+levels(BFI.MI.full$제2순위) <- levels(BFI.MI.full$제1순위)
+levels(BFI.MI.full$제3순위) <- levels(BFI.MI.full$제1순위)
+kable(t(sapply(BFI.MI.full[c("제1순위", "제2순위", "제3순위")], table)))
+```
+
+<!--
 
 이름을 빼고 학번만 표시
 
@@ -203,3 +219,4 @@ MI.absent
 class.roll$ID[MI.absent]
 class.roll$Name[MI.absent]
 ```
+-->
